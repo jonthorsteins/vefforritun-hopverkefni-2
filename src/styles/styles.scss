@@ -15,9 +15,17 @@ html { /* stylelint-disable-line */
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: scroll; // alltaf hafa y skrollbar
-
   font-family: $font-main;
   font-size: 16px;
+}
+
+main {
+  max-width: $max-width;
+}
+
+
+h1,h2,h3{
+  font-family: $font-headline;
 }
 
 img { /* stylelint-disable-line */
@@ -25,3 +33,4 @@ img { /* stylelint-disable-line */
 }
 
 // TODO import
+@import "header.scss";
