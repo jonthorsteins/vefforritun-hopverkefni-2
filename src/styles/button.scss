@@ -1,0 +1,31 @@
+
+button {
+  height: 5vh;
+  width: 10vh;
+  border-radius: 12px;
+  border: none;
+  font-size: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+  color : #000000;
+  background-color : lightgray;
+}
+
+.button {
+
+  margin: 0 auto;
+  margin-bottom: 2em;
+  margin-top: 2em;
+
+  &__html {
+
+  }
+
+  &__css {
+    margin-left: 3em;
+  }
+
+  &__js {
+    margin-left: 3em;
+  }
+}
