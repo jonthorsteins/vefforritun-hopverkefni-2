@@ -1,31 +1,58 @@
 
 button {
-  height: 5vh;
-  width: 10vh;
-  border-radius: 12px;
+  height: 2em;
+  border-radius: 20px;
   border: none;
-  font-size: 25px;
+  font-size: 50px;
   font-weight: bold;
   transition: 0.3s;
   color : #000000;
   background-color : lightgray;
+  display: inline-block;
 }
 
 .button {
-
+  text-align: center;
   margin: 0 auto;
-  margin-bottom: 2em;
-  margin-top: 2em;
+  margin-bottom: 3em;
+  margin-top: 3em;
 
   &__html {
-
+      width: 20%;
   }
 
   &__css {
-    margin-left: 3em;
+    width: 15%;
+    margin-left: 2.4em;
   }
 
   &__js {
-    margin-left: 3em;
+    width: 35%;
+    margin-left: 2.4em;
   }
+}
+
+@media (min-width: 1290px) {
+
+  button {
+    font-size: 25px;
+  }
+
+  .button {
+
+    &__html {
+        width: 5em;
+    }
+
+    &__css {
+      width: 5em;
+      margin-left: 2em;
+    }
+
+    &__js {
+      width: 7em;
+      margin-left: 2em;
+    }
+  }
+
 }

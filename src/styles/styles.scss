@@ -21,8 +21,9 @@ html { /* stylelint-disable-line */
 
 main {
   max-width: $max-width;
+  margin: 0 auto;
+  padding: $gutter;
 }
-
 
 h1,h2,h3{
   font-family: $font-headline;
@@ -34,5 +35,5 @@ img { /* stylelint-disable-line */
 
 // TODO import
 @import "header.scss";
-@import "list.scss";
+@import "lectures.scss";
 @import "button.scss";
