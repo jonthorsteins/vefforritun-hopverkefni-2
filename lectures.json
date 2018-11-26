@@ -160,7 +160,7 @@
       "slug": "html-a11y",
       "title": "Aðgengi",
       "category": "html",
-      "image": "img/code3.jpg",
+      "image": "img/code2.jpg",
       "thumbnail": "img/thumb2.jpg",
       "content": [
         {
@@ -303,6 +303,7 @@
       "slug": "css-flexbox",
       "title": "Flexbox",
       "category": "css",
+      "image": "img/code2.jpg",
       "thumbnail": "img/thumb5.jpg",
       "content": [
         {
@@ -315,6 +316,7 @@
       "slug": "css-responsive",
       "title": "Skalanleg vefhönnun",
       "category": "css",
+      "image": "img/code2.jpg",
       "thumbnail": "img/thumb6.jpg",
       "content": [
         {
@@ -436,6 +438,7 @@
       "slug": "js-programs",
       "title": "Forrit",
       "category": "javascript",
+      "image": "img/code2.jpg",
       "thumbnail": "img/thumb7.jpg",
       "content": [
         {
@@ -512,6 +515,8 @@
       "slug": "js-dom",
       "title": "DOM & vafrinn",
       "category": "javascript",
+      "image": "img/code.jpg",
+      "thumbnail": "img/thumb9.jpg",
       "content": [
         {
           "type": "youtube",
