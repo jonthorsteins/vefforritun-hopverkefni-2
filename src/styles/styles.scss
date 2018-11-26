@@ -22,11 +22,14 @@ html { /* stylelint-disable-line */
 main {
   max-width: $max-width;
   margin: 0 auto;
-  padding: $gutter;
 }
 
 h1,h2,h3{
   font-family: $font-headline;
+}
+
+p {
+  font-family: $font-main;
 }
 
 img { /* stylelint-disable-line */

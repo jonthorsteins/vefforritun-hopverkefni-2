@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         $(data.lectures).each(function(index,value) {
           $(".lecture__category--"+count).append("<p>"+  value.category + "</p>");
           $(".lecture__title--"+count).append("<h1>"+  value.title + "</h1>");
-          $(".lecture__img--"+count).append("<img src='"+ "../" + value.thumbnail + "'></img>");
+          if(value.thumbnail !== undefined) {$(".lecture__img--"+count).append("<img src='"+ "../" + value.thumbnail + "' ></img>");}
           $(".lecture:nth-child("+count+")").wrap("<a class = 'link' href='"+ "../fyrirlestur.html?slug=" + value.slug + "'></a>");
           count++;
         });
