@@ -1,1 +1,52 @@
 
+
+iframe {
+  margin-top : 2em;
+  margin-bottom : 2em;
+
+}
+
+.smallText_1, .smallText_2{
+    font-size: 1.5em;
+}
+
+h1,h3 {
+  color : #000;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.blockQuote {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding : 1em;
+  background-color: #ddd;
+}
+.quote, .author {
+    font-size: 2em;
+    margin-top: 0.5em;
+}
+
+.computer {
+  width: 100%;
+}
+
+.caption {
+  font-size: 1.3em;
+}
+
+ul {
+  margin-top: 1em;
+  font-size: 1.8em;
+}
+
+li {
+  margin-bottom: 1em;
+}
