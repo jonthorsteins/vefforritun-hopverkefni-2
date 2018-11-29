@@ -35,12 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
           if( param == value.slug) {
 
             if(param == "html-sagan") {
+              // Bætum við og appendum gildum í fyrirlestur.html
+              $(".code").attr('src', value.image);
+              $(".img__text").append("<h3>"+  value.category + "</h3>");
+              $(".img__text").append("<h1>"+  value.slug + "</h1>");
 
-            // Athugar hvort data sé linkur
-            if (value.content[index].type = "youtube" )
-                $("iframe").attr('src', value.content[0].data);
-
-            if (value.content[index].type = "text" )
+              // Athugar hvort data sé linkur
+              //if (value.content[index].type = "youtube" )
+              $("iframe").attr('src', value.content[0].data);
+              //if (value.content[index].type = "text" )
               $(".smallText_1").append(value.content[1].data);
               $(".quote").append(value.content[2].data);
               $(".author").append(value.content[2].attribute);
@@ -49,19 +52,42 @@ document.addEventListener('DOMContentLoaded', () => {
               $(".caption").append(value.content[4].caption);
               $(".caption").append("<h1>"+ value.content[5].data+"</h1>")
               for (let i = 0 ; i < 4; i++)
-                $("ul").append("<li>"+ value.content[6].data[i]+"</li>")
+                  $("ul").append("<li>"+ value.content[6].data[i]+"</li>")
               $("ul").append("<code>"+ value.content[7].data +"</code>")
+            }
+
+            if(param == "html-element") {
+
+              $("iframe").remove();
+              $("ul").remove();
+
+              $(".code").attr('src', value.image);
+              $(".img__text").append("<h3 id = 'h3_white'>"+  value.category + "</h3>");
+              $(".img__text").append("<h1 id = 'h1_white'>"+  value.slug + "</h1>");
+
+              $(".smallText_1").append("<div>"+value.content[0].data+"</div>");
+              $(".smallText_1").append("<ul></ul>");
+              for (let i = 0 ; i < 7; i++)
+                  $("ul").append("<li>"+ value.content[1].data[i]+"</li>");
+              $(".smallText_2").append("<div>"+value.content[2].data+"</div>");
+              $(".smallText_2").append("<div><h1>" + value.content[3].data +"</h1></div>");
+              $(".smallText_2").append("<div><xmp>"+ value.content[4].data + "</div></xmp");
+              $(".smallText_2").append("<div><h1>" + value.content[5].data +"</h1></div>");
+              $("main").append("<div><xmp>" + value.content[6].data +"</xmp></div>");
+
+            }
+
+            if(param == "html-a11y") {
+
+              $(".code").attr('src', value.image);
+              $(".img__text").append("<h3 id = h3_white>"+  value.category + "</h3>");
+              $(".img__text").append("<h1 id = 'h1_white' >" +  value.slug + "</h1>");
+
+            }
 
 
 
-
-            // Bætum við og appendum gildum í fyrirlestur.html
-            $(".code").attr('src', value.image);
-            $(".img__text").append("<h3>"+  value.category + "</h3>");
-            $(".img__text").append("<h1>"+  value.slug + "</h1>");
-
-
-          }}
+        }
         });
       }
     });

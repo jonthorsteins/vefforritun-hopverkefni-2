@@ -6,6 +6,10 @@ iframe {
 
 }
 
+div {
+  margin-bottom: 2em;
+}
+
 .smallText_1, .smallText_2{
     font-size: 1.5em;
 }
@@ -13,6 +17,8 @@ iframe {
 h1,h3 {
   color : #000;
 }
+
+#h1_white, #h3_white { color : white};
 
 .largeText {
   font-size: 3em;
