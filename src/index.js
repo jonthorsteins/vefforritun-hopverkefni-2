@@ -12,6 +12,8 @@ let cacheDOM_9; let cacheDOM_10; let cacheDOM_11; let cacheDOM_12; let cacheDOM_
 
 //const json = 'lectures.json';
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
   const html_btn = document.querySelector('.button__html');
@@ -21,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   if (isLecturePage) {
-
     $.ajax({
       url: '../lectures.json',
       dataType: 'json',
@@ -29,16 +30,50 @@ document.addEventListener('DOMContentLoaded', () => {
       cache: false,
       success: function(data) {
         $(data.lectures).each(function(index,value) {
-
           // Ber saman slug við enda á URL
           // Bætum svo við viðeigandi texta, linkum og myndum
           if( param == value.slug) {
 
+            // Bætum við og appendum gildum í fyrirlestur.html
+            $(".code").attr('src', value.image);
+            $(".img__text").append("<h3>"+  value.category + "</h3>");
+            $(".img__text").append("<h1>"+  value.slug + "</h1>");
+
+            for(let i=0; i < value.content.length; i++) {
+
+              if(value.content[i].type == "youtube"){
+                $(".lecture-page").append('<iframe src="' + value.content[i].data + '"frameborder="0" allowfullscreen width="100%" height="700"></iframe>');
+              }
+              if(value.content[i].type == "text"){
+                $(".lecture-page").append('<p class = "smallText_1">'+ value.content[i].data + '</p>');
+              }
+              if(value.content[i].type == "quote"){
+                $(".lecture-page").append('<div class = "blockQuote">');
+                $(".blockQuote").append('<p class = "quote">' + value.content[i].data + '</p>');
+                $(".blockQuote").append('<p class = "author">' + value.content[i].attribute + '</p>');
+              }
+              if(value.content[i].type == "image"){
+                $(".lecture-page").append('<img class = "computer" src="'+ value.content[i].data + '"></img>');
+                $(".lecture-page").append('<p class = "caption">' + value.content[i].caption + '</p>');
+              }
+              if(value.content[i].type == "heading"){
+                $(".lecture-page").append('<h1 class = "largeText">' + value.content[i].data + ' </h1>');
+              }
+              if(value.content[i].type == "list"){
+                $(".lecture-page").append('<ul class="list">');
+                for(let j=0; j<value.content[i].data.length; j++){
+                  $(".list").append('<li>'+ value.content[i].data[j] + '</li>');
+                }
+              }
+              if(value.content[i].type == "code"){
+                $(".lecture-page").append('<xmp>'+ value.content[i].data + '</xmp>');
+              }
+              console.log(i + " " + value.content[i].data + value.content[i][0]);
+            }
+
+/*
             if(param == "html-sagan") {
-              // Bætum við og appendum gildum í fyrirlestur.html
-              $(".code").attr('src', value.image);
-              $(".img__text").append("<h3>"+  value.category + "</h3>");
-              $(".img__text").append("<h1>"+  value.slug + "</h1>");
+
 
               // Athugar hvort data sé linkur
               //if (value.content[index].type = "youtube" )
@@ -54,37 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
               for (let i = 0 ; i < 4; i++)
                   $("ul").append("<li>"+ value.content[6].data[i]+"</li>")
               $("ul").append("<code>"+ value.content[7].data +"</code>")
-            }
 
-            if(param == "html-element") {
-
-              $("iframe").remove();
-              $("ul").remove();
-
-              $(".code").attr('src', value.image);
-              $(".img__text").append("<h3 id = 'h3_white'>"+  value.category + "</h3>");
-              $(".img__text").append("<h1 id = 'h1_white'>"+  value.slug + "</h1>");
-
-              $(".smallText_1").append("<div id = 'div'>"+value.content[0].data+"</div>");
-              $(".smallText_1").append("<ul></ul>");
-              for (let i = 0 ; i < 7; i++)
-                  $("ul").append("<li>"+ value.content[1].data[i]+"</li>");
-              $(".smallText_2").append("<div id = 'div'>"+value.content[2].data+"</div>");
-              $(".smallText_2").append("<div id = 'div'><h1>" + value.content[3].data +"</h1></div>");
-              $(".smallText_2").append("<div id = 'div'><xmp>"+ value.content[4].data + "</div></xmp");
-              $(".smallText_2").append("<div id = 'div'><h1>" + value.content[5].data +"</h1></div>");
-              $("main").append("<div><xmp>" + value.content[6].data +"</xmp></div>");
-
-            }
-
-            if(param == "html-a11y") {
-
-              $(".code").attr('src', value.image);
-              $(".img__text").append("<h3 id = h3_white>"+  value.category + "</h3>");
-              $(".img__text").append("<h1 id = 'h1_white' >" +  value.slug + "</h1>");
-
-            }
-
+              renderQuestion("afhverju?")
+            }*/
 
 
         }
