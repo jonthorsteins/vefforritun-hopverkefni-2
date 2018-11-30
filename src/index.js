@@ -5,13 +5,9 @@ let html_clicked = false;
 let css_clicked = false;
 let js_clicked = false;
 let param = window.location.search.substr(6);
-let cache = [];
 let cacheDOM_1; let cacheDOM_2; let cacheDOM_3; let cacheDOM_4;
 let cacheDOM_5; let cacheDOM_6; let cacheDOM_7; let cacheDOM_8;
 let cacheDOM_9; let cacheDOM_10; let cacheDOM_11; let cacheDOM_12; let cacheDOM_13;
-
-//const json = 'lectures.json';
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -71,34 +67,23 @@ document.addEventListener('DOMContentLoaded', () => {
               console.log(i + " " + value.content[i].data + value.content[i][0]);
             }
 
-/*
-            if(param == "html-sagan") {
+
+            // Linkar neðst á síðu - "klára fyrirlestur" og "til baka"
+            $("body").append("<btn id = 'finish'><p class = 'finishLecture' href = '../'> Fyrirlestur Kláraður </p></btn>" );
+            $("body").append("<a class = 'back' href = '../'> Til Baka </a>" );
 
 
-              // Athugar hvort data sé linkur
-              //if (value.content[index].type = "youtube" )
-              $("iframe").attr('src', value.content[0].data);
-              //if (value.content[index].type = "text" )
-              $(".smallText_1").append(value.content[1].data);
-              $(".quote").append(value.content[2].data);
-              $(".author").append(value.content[2].attribute);
-              $(".smallText_2").append(value.content[3].data);
-              $(".computer").attr('src', value.content[4].data);
-              $(".caption").append(value.content[4].caption);
-              $(".caption").append("<h1>"+ value.content[5].data+"</h1>")
-              for (let i = 0 ; i < 4; i++)
-                  $("ul").append("<li>"+ value.content[6].data[i]+"</li>")
-              $("ul").append("<code>"+ value.content[7].data +"</code>")
+            // Ef Fyrirlestur er kláraður
+           document.getElementById("finish").addEventListener("click", function(){
+              document.getElementById("finish").style.color = "green";
+              console.log(param);
 
-              renderQuestion("afhverju?")
-            }*/
-
+           });
 
         }
         });
       }
     });
-
 
   } else {
 
@@ -120,6 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
           count++;
      });
+
+     // TEST !! uppá check icon
+     $(".lecture__category--12").append("<i class = 'material-icons'> </i>");
+     $(".material-icons").append("check");
 
 
      /*
@@ -219,7 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
 
-
         css_btn.addEventListener("click", function(){
           // Eyða öllum elementum
           removeAll();
@@ -258,7 +246,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
           }
         });
-
 
 
       html_btn.addEventListener("click", function(){
