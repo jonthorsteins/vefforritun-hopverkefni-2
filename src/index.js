@@ -65,14 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
               $(".img__text").append("<h3 id = 'h3_white'>"+  value.category + "</h3>");
               $(".img__text").append("<h1 id = 'h1_white'>"+  value.slug + "</h1>");
 
-              $(".smallText_1").append("<div>"+value.content[0].data+"</div>");
+              $(".smallText_1").append("<div id = 'div'>"+value.content[0].data+"</div>");
               $(".smallText_1").append("<ul></ul>");
               for (let i = 0 ; i < 7; i++)
                   $("ul").append("<li>"+ value.content[1].data[i]+"</li>");
-              $(".smallText_2").append("<div>"+value.content[2].data+"</div>");
-              $(".smallText_2").append("<div><h1>" + value.content[3].data +"</h1></div>");
-              $(".smallText_2").append("<div><xmp>"+ value.content[4].data + "</div></xmp");
-              $(".smallText_2").append("<div><h1>" + value.content[5].data +"</h1></div>");
+              $(".smallText_2").append("<div id = 'div'>"+value.content[2].data+"</div>");
+              $(".smallText_2").append("<div id = 'div'><h1>" + value.content[3].data +"</h1></div>");
+              $(".smallText_2").append("<div id = 'div'><xmp>"+ value.content[4].data + "</div></xmp");
+              $(".smallText_2").append("<div id = 'div'><h1>" + value.content[5].data +"</h1></div>");
               $("main").append("<div><xmp>" + value.content[6].data +"</xmp></div>");
 
             }
