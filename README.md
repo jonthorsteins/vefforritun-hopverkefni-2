@@ -1,3 +1,12 @@
+Keyrsla á verkefni:
+Verkefnið er keyrt með því að installa npm í möppunni sem það er í og síðan keyrt með npm run dev.
+Uppsetning á verkefni:
+Verkefnið er skipulagt eins og það sem gefið var með verkefnalýsingunni.
+Höfundar verkefnis:
+Jón Þorsteinsson - jth56@hi.is
+Kristófer Már Gíslason - kmg14@hi.is
+
+
 # Hópverkefni 2
 
 Verkefnið felst í því að smíða prótótýpu af fyrirlestravef fyrir vefforritun. Gefin eru gögn sem unnin eru uppúr námsefni vetrarins.
