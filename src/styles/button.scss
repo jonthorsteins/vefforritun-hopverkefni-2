@@ -61,34 +61,11 @@ button:hover {
 
 }
 
-
-
-/*
-
-@media (min-width: 700px) {
-
+@media (min-width: 550px) {
   button {
-    font-size: 25px;
+
+    font-size: 30px;
+
   }
 
-  .button {
-
-    margin-left: 27%;
-    margin-right: 27%;
-
-    &__html {
-        width: 5em;
-    }
-
-    &__css {
-      width: 5em;
-      margin-left: 2em;
-    }
-
-    &__js {
-      width: 7em;
-      margin-left: 2em;
-    }
-  }
-
-}*/
+}
